@@ -1,0 +1,17 @@
+//
+//  LazyTable_Prefix.pch
+//  LazyTable
+//
+//  Created by mingyue on 16/5/28.
+//  Copyright © 2016年 csii. All rights reserved.
+//
+
+#ifndef LazyTable_Prefix_pch
+#define LazyTable_Prefix_pch
+
+#ifdef __OBJC__
+@import Foundation;
+@import UIKit;
+#endif
+
+#endif /* LazyTable_Prefix_pch */
