@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     var startPoint:CGPoint?
     var endPoint:CGPoint?
     var isDrawFlag:Bool = false
+    
+    // MARK: view life circle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(imageView)
@@ -40,6 +42,28 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    func creatButtons(){
+        for i in 0...8{
+            let btn = UIImageView(image: UIImage(named: "blue_circle.png"))
+            let x = 30 + 27 + i % 3 * 100
+            let y = 20 + i / 3 * 90
+            btn.frame = CGRectMake(CGFloat(x), CGFloat(y), 50.0, 50.0)
+            btn.tag = 1000 + i
+            imageView.addSubview(btn)
+            buttons.append(btn)
+        }
+    }
+    
+    func clearData(){
+        imageView.image = nil
+        isDrawFlag = false
+        buttons.forEach { btn in
+            btn.image = UIImage(named: "blue_circle.png")
+        }
+        selectedButtons.removeAll()
+    }
+    
+    // MARK: touch events
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // 清除之前数据
         clearData()
@@ -80,21 +104,12 @@ class ViewController: UIViewController {
         }
     }
     
-    func creatButtons(){
-        for i in 0...8{
-            let btn = UIImageView(image: UIImage(named: "blue_circle.png"))
-            let x = 30 + 27 + i % 3 * 100
-            let y = 20 + i / 3 * 90
-            btn.frame = CGRectMake(CGFloat(x), CGFloat(y), 50.0, 50.0)
-            btn.tag = 1000 + i
-            imageView.addSubview(btn)
-            buttons.append(btn)
-        }
-    }
-    
-    func drawUnlocLine() -> UIImage {
+    // MARK: draw methods
+    func drawUnlocLine() -> UIImage? {
         UIGraphicsBeginImageContext(imageView.frame.size);
-        let context:CGContext = UIGraphicsGetCurrentContext()!;
+        guard let context:CGContext = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
         context.setLineWidth(5.0);
         context.setFillColor(UIColor.green.cgColor)
         context.setStrokeColor(UIColor.red.cgColor)
@@ -116,15 +131,6 @@ class ViewController: UIViewController {
         let image:UIImage = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage(named: "")!
         UIGraphicsEndImageContext()
         return image
-    }
-    
-    func clearData(){
-        imageView.image = nil
-        isDrawFlag = false
-        buttons.forEach { btn in
-            btn.image = UIImage(named: "blue_circle.png")
-        }
-        selectedButtons.removeAll()
     }
 }
 

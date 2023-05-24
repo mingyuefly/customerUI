@@ -12,7 +12,6 @@
 		92C700721B621BA800A20C57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C700701B621BA800A20C57 /* Main.storyboard */; };
 		92C700741B621BA800A20C57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C700731B621BA800A20C57 /* Images.xcassets */; };
 		92C700771B621BA800A20C57 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C700751B621BA800A20C57 /* LaunchScreen.xib */; };
-		92C700831B621BA800A20C57 /* shoushimimaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C700821B621BA800A20C57 /* shoushimimaTests.swift */; };
 		92C7008D1B621BD700A20C57 /* blue_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C7008C1B621BD700A20C57 /* blue_circle.png */; };
 		92C7008F1B621BE000A20C57 /* red_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C7008E1B621BE000A20C57 /* red_circle.png */; };
 /* End PBXBuildFile section */
@@ -36,8 +35,6 @@
 		92C700731B621BA800A20C57 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		92C700761B621BA800A20C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		92C7007C1B621BA800A20C57 /* shoushimimaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shoushimimaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		92C700811B621BA800A20C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92C700821B621BA800A20C57 /* shoushimimaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoushimimaTests.swift; sourceTree = "<group>"; };
 		92C7008C1B621BD700A20C57 /* blue_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_circle.png; sourceTree = "<group>"; };
 		92C7008E1B621BE000A20C57 /* red_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_circle.png; sourceTree = "<group>"; };
 		92C700901B62238700A20C57 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
@@ -65,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				92C700691B621BA800A20C57 /* shoushimima */,
-				92C7007F1B621BA800A20C57 /* shoushimimaTests */,
 				92C700681B621BA800A20C57 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,23 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				92C7006B1B621BA800A20C57 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		92C7007F1B621BA800A20C57 /* shoushimimaTests */ = {
-			isa = PBXGroup;
-			children = (
-				92C700821B621BA800A20C57 /* shoushimimaTests.swift */,
-				92C700801B621BA800A20C57 /* Supporting Files */,
-			);
-			path = shoushimimaTests;
-			sourceTree = "<group>";
-		};
-		92C700801B621BA800A20C57 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				92C700811B621BA800A20C57 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,7 +213,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92C700831B621BA800A20C57 /* shoushimimaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
