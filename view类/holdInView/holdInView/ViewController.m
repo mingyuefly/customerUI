@@ -29,11 +29,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.imageView];
-    //[self.view addSubview:self.drawView];
-    //[self.view addSubview:self.drawViewRect];
-    //[self.view addSubview:self.drawViewArc];
-    //[self.view addSubview:self.drawArc];
-    [self addArc];
+//    [self.view addSubview:self.drawView];
+//    [self.view addSubview:self.drawViewRect];
+//    [self.view addSubview:self.drawViewArc];
+    [self.view addSubview:self.drawArc];
+//    [self addArc];
 }
 
 - (void)addArc {
@@ -53,7 +53,6 @@
     fillLayer.fillColor = [UIColor whiteColor].CGColor;
     fillLayer.opacity = 0.5;
     [self.view.layer addSublayer:fillLayer];
- 
 }
 
 -(UIImageView *)imageView

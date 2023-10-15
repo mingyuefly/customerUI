@@ -45,6 +45,7 @@
     //绘制
     //CGContextDrawPath(ctx, kCGPathFillStroke);
     UIRectFill(holeiInterSection);
+//    UIRectFill(holeRection);
 }
 
 

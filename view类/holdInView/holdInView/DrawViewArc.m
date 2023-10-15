@@ -34,7 +34,7 @@
     CAShapeLayer *fillLayer = [CAShapeLayer layer];
     fillLayer.path = path.CGPath;
     fillLayer.fillRule = kCAFillRuleEvenOdd;
-    fillLayer.fillColor = [UIColor whiteColor].CGColor;
+    fillLayer.fillColor = [UIColor redColor].CGColor;
     fillLayer.opacity = 0.5;
     [self.layer addSublayer:fillLayer];
  

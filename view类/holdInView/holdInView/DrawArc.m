@@ -28,7 +28,8 @@
  
     //背景色
     //[[UIColor colorWithPatternImage:[UIImage imageNamed:@"1.jpg"]] set];
-    [[UIColor colorWithWhite:0 alpha:0.5] set];
+    [[UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.5] set];
+//    [[UIColor colorWithWhite:0 alpha:0.5] set];
     CGContextAddRect(ctx, rect);
     CGContextFillPath(ctx);
  
@@ -54,7 +55,6 @@
  
     //填充
     CGContextFillPath(ctx);
- 
 }
 
 @end
